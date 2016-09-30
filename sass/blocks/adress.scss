@@ -1,0 +1,75 @@
+.adress {
+  width: 34%;
+  margin-right: 140px;
+  padding: 38px 0 0 20px;
+}
+
+.adress__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.adress__item {
+  font: normal 12px "Roboto", sans-serif;
+  color: $gray;
+  // transport
+  &:nth-child(3) {
+    span {
+      &:first-child {
+        &:first-letter {
+          color: #0080c8;
+        }
+      }
+      &:nth-child(2) {
+        &:first-letter {
+          color: black;
+        }
+      }
+      &:last-child {
+        &:first-letter {
+          color: $red;
+        }
+      }
+    }
+  }
+  // mail
+  &:nth-child(5) {
+    span {
+      margin-bottom: 15px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.adress__sub-title {
+  width: 100%;
+  padding: 5px 0 5px 50px;
+  text-transform: uppercase;
+  background-color: $gray;
+  color: white;
+}
+
+.adress__content {
+  padding: 15px 0 15px 50px;
+  span {
+    display: block;
+  }
+}
+
+.adress__sub {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+.adress__sub-mail {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.adress__sub-tel {
+  display: block;
+}

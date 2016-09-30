@@ -1,0 +1,214 @@
+/* header */
+.header {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    will-change: transform;
+}
+
+/* main menu */
+.header__menu-row {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 3rem;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    will-change: transform;
+    background-color: #3b3b3a;
+}
+
+.header__menu-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: inherit;
+
+    @include container;
+}
+
+.header__menu-item {
+    position: relative;
+    display: flex;
+		justify-content: flex-start;
+    align-items: center;
+		width: 16.666%;
+    height: 100%;
+
+    &:hover {
+      .header__sub-menu {
+        display: block;
+        -moz-animation: fadeIn .3s ease-in;
+        -webkit-animation: fadeIn .3s ease-in;
+        animation: fadeIn .3s ease-in;
+      }
+      &:last-child {
+        background-image: url(../img/icons/home-red.png);
+      }
+    }
+		&:first-child {
+			padding-left: 4.5rem;
+		}
+    &:last-child {
+      width: 10px;
+      background: url("../img/icons/home.png") center no-repeat;
+      background-size: contain;
+			cursor: pointer;
+
+      a {
+        font-size: 0;
+      }
+    }
+		&:nth-child(3) {
+			padding-right: 2rem;
+		}
+		&:nth-last-child(2) {
+			padding-left: 6rem;
+		}
+}
+
+.header__menu-link {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+
+    &--active {
+      color: $red;
+    }
+}
+
+// submenu
+.header__sub-menu {
+		z-index: 50;
+    position: absolute;
+    top: 3rem;
+    left: -15px;
+    display: none;
+    white-space: nowrap;
+    background-color: $gray-light;
+    -webkit-box-shadow: 0 10px 10px 0 rgba(0,0,0,.3);
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,.3);
+
+    // .submenu--repeat
+    &--repeat {
+      position: static;
+      display: flex;
+      // flex-wrap: nowrap;
+      justify-content: flex-end;
+			align-items: center;
+      height: inherit;
+      background-color: transparent;
+      box-shadow: none;
+
+      .header__sub-item {
+				flex: 0 0 auto;
+        padding: 0 0 0 10px;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+    // submenu in the .footer
+    &--footer {
+      position: static;
+      display: flex;
+      flex-direction: column;
+      height: inherit;
+      background-color: transparent;
+      box-shadow: none;
+
+      .header__sub-item {
+        padding-left: 0;
+        padding-right: 0;
+
+				.header__sub-link {
+					font-size: 0.9rem;
+				}
+      }
+    }
+}
+
+.header__sub-item {
+    padding: 10px 40px 0 15px;
+
+    // &:nth-last-of-type(2) {
+    //   padding-bottom: 20px;
+    // }
+}
+
+// .main-footer__item:nth-last-child(2) {
+// 	.header__sub-item:nth-last-child(2) {
+// 		padding-bottom: 20px;
+// 	}
+// }
+
+.header__sub-link {
+    text-transform: uppercase;
+    font: normal 0.8rem "Roboto", sans-serif;
+    color: $gray-dark;
+
+    &--active {
+      color: $red;
+    }
+}
+
+// main part
+.header__main-row {
+    position: absolute;
+    top: 3rem;
+    left: 100%;
+    width: 100%;
+    height: 6.6rem;
+    background-color: $gray-light;
+    -webkit-box-shadow: 0 10px 21px 0 rgba(0,0,0,.25);
+    box-shadow: 0 10px 21px 0 rgba(0,0,0,.25);
+}
+
+.header__main-wrap {
+    height: inherit;
+
+    @include container;
+    @include clearfix;
+}
+
+// right side
+.header__main-inner {
+    position: relative;
+    float: right;
+    width: auto;
+    max-width: 80%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.header__main-repeat {
+    position: relative;
+    width: 100%;
+    height: 4.5rem;
+}
+
+// logo part
+.logo__wrap {
+    position: relative;
+    float: left;
+    width: 140px;
+    padding: 10px 0 0;
+}
+
+.logo__link {
+  display: block;
+  text-align: center;
+}

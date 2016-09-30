@@ -1,0 +1,17 @@
+.promo {
+  width: auto;
+  margin: 0 auto;
+}
+
+.promo__text {
+  padding: 32px 0 0 0;
+  text-transform: uppercase;
+  text-align: center;
+  font: bold 1.2rem "Roboto", sans-serif;
+  color: $red;
+
+  &--logo {
+    padding: 0;
+    font-size: 0.97rem;
+  }
+}

@@ -1,0 +1,34 @@
+/* footer */
+.footer {
+	z-index: 100;
+	position: relative;
+  height: 4vh;
+  background-color: rgba(134, 135, 134, 0.2);
+  -webkit-box-shadow: 0 -10px 21px 0 rgba(0,0,0,.25);
+  box-shadow: 0 -10px 21px 0 rgba(0,0,0,.25);
+
+	// iPad with portrait orientation.
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+		height: 40.96px; }
+	// iPad with landscape orientation.
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+		height: 30.72px; }
+}
+
+.footer__inner {
+  height: inherit;
+
+  .header__sub-item {
+    padding: 0 0 0 10px;
+  }
+  @include container;
+	@include clearfix;
+}
+
+.footer__sub-wrap {
+	position: relative;
+	float: right;
+	width: auto;
+	max-width: 80%;
+	height: inherit;
+}

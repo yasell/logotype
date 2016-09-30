@@ -1,0 +1,125 @@
+.main-footer {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 39rem;
+	background-color: $gray-light;
+	-webkit-box-shadow: 0 10px 21px 0 rgba(0,0,0,.25);
+	box-shadow: 0 10px 21px 0 rgba(0,0,0,.25);
+	overflow: hidden;
+}
+
+.main-footer__top {
+	height: 3rem;
+	background-color: #3b3b3a;
+}
+
+.main-footer__inner {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	min-height: 360px;
+	overflow: hidden;
+
+	@include container;
+}
+
+.main-footer__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 16.666%;
+
+	.logo__wrap {
+		width: 140px;
+		padding-bottom: 42px;
+	}
+	&:last-child {
+		width: 10px;
+	}
+	&:nth-child(3) {
+		padding-right: 2rem;
+	}
+	&:nth-last-child(2) {
+		padding-left: 6rem;
+	}
+	// доп. три пункта меню - отступ
+	&:nth-last-child(3) {
+		.header__sub-menu--footer {
+			.header__sub-item {
+				&:nth-last-child(3) {
+					padding-top: 22px;
+				}
+			}
+		}
+	}
+}
+
+// social
+.main-footer__social {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 19px 0 0;
+}
+
+.main-footer__soc-item {
+	width: 24px;
+	height: 24px;
+	margin: 0 10px 0 0;
+
+	&:last-child {
+		margin: 0;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.main-footer__soc-link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url(../img/social.png) no-repeat;
+
+	&--fb {
+		background-position: -5px -5px;
+		&:hover {
+			background-position: -39px -5px;
+		}
+	}
+	&--ok {
+		background-position: -73px -5px;
+		&:hover {
+			background-position: -107px -5px;
+		}
+	}
+	&--tw {
+		background-position: -175px -5px;
+		&:hover {
+			background-position: -141px -5px;
+		}
+	}
+	&--vk {
+		background-position: -209px -5px;
+		&:hover {
+			background-position: -243px -5px;
+		}
+	}
+}
+
+.main-footer__link {
+	padding: 0 0 40px;
+	font-size: 1.1rem;
+}
+
+// map
+.main-footer__map {
+	display: block;
+	width: 160%;
+	height: 177px;
+	margin: 10px 0 auto 0;
+	background: $gray;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "logotype",
+  "private": true,
+  "description": "web-site",
+  "author": "Raman_Yasel",
+  "devDependencies": {
+    "autoprefixer": "6.4.1",
+    "browser-sync": "2.15.0",
+    "css-mqpacker": "^5.0.1",
+    "editorconfig-tools": "0.1.1",
+    "gulp": "3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "2.3.2",
+    "npm-check-updates": "^2.8.0"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp serve"
+  },
+  "engines": {
+    "node": "^6.5.0"
+  }
+}

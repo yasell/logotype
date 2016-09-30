@@ -1,0 +1,344 @@
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+button,
+canvas,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+section,
+small,
+span,
+strong,
+summary,
+time,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+abbr:after,
+abbr:before,
+address:after,
+address:before,
+article:after,
+article:before,
+aside:after,
+aside:before,
+audio:after,
+audio:before,
+b:after,
+b:before,
+blockquote:after,
+blockquote:before,
+body:after,
+body:before,
+button:after,
+button:before,
+canvas:after,
+canvas:before,
+cite:after,
+cite:before,
+code:after,
+code:before,
+dd:after,
+dd:before,
+del:after,
+del:before,
+details:after,
+details:before,
+dfn:after,
+dfn:before,
+div:after,
+div:before,
+dl:after,
+dl:before,
+dt:after,
+dt:before,
+em:after,
+em:before,
+fieldset:after,
+fieldset:before,
+figcaption:after,
+figcaption:before,
+figure:after,
+figure:before,
+footer:after,
+footer:before,
+form:after,
+form:before,
+h1:after,
+h1:before,
+h2:after,
+h2:before,
+h3:after,
+h3:before,
+h4:after,
+h4:before,
+h5:after,
+h5:before,
+h6:after,
+h6:before,
+header:after,
+header:before,
+hgroup:after,
+hgroup:before,
+html:after,
+html:before,
+i:after,
+i:before,
+iframe:after,
+iframe:before,
+img:after,
+img:before,
+ins:after,
+ins:before,
+kbd:after,
+kbd:before,
+label:after,
+label:before,
+legend:after,
+legend:before,
+li:after,
+li:before,
+mark:after,
+mark:before,
+menu:after,
+menu:before,
+nav:after,
+nav:before,
+object:after,
+object:before,
+ol:after,
+ol:before,
+p:after,
+p:before,
+pre:after,
+pre:before,
+q:after,
+q:before,
+samp:after,
+samp:before,
+section:after,
+section:before,
+small:after,
+small:before,
+span:after,
+span:before,
+strong:after,
+strong:before,
+summary:after,
+summary:before,
+time:after,
+time:before,
+ul:after,
+ul:before,
+var:after,
+var:before,
+video:after,
+video:before {
+    box-sizing: border-box;
+}
+
+sub,
+sup {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+sub:after,
+sub:before,
+sup:after,
+sup:before {
+    box-sizing: border-box;
+}
+
+a:after,
+a:before {
+    box-sizing: border-box;
+}
+
+caption,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1.2;
+}
+
+li,
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:after,
+blockquote:before {
+    content: "";
+    content: none;
+}
+
+q:after,
+q:before {
+    content: "";
+    content: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+input[type="text"],
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="text"]::-ms-clear,
+textarea::-ms-clear {
+    display: none;
+}
+
+input,
+textarea {
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #000;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #000;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #000;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+textarea {
+    resize: none;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+    word-wrap: break-word;
+}

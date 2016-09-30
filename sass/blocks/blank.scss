@@ -1,0 +1,267 @@
+.blank {
+  width: 45%;
+  margin: 0;
+  padding: 15px 25px 0 0;
+
+  // common styles
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="file"],
+  textarea {
+    width: 45%;
+    min-height: 100%;
+    padding: 0 10px 0 10px;
+    background-color: white;
+    border: 1px solid white;
+
+    &::-webkit-input-placeholder {
+      color: $gray;
+    }
+    &::-moz-placeholder {
+      color: $gray;
+    }
+    &::-ms-input-placeholder {
+      color: $gray;
+    }
+    &:hover {
+      border-color: $gray;
+    }
+    &:focus {
+      outline: none;
+      border-color: $gray;
+    }
+    &:required:valid {
+      border-color: green;
+    }
+  }
+}
+
+.blank__list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+     -ms-flex-direction: column;
+         flex-direction: column;
+  font-size: 9px;
+}
+
+.blank__item {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  width: 100%;
+  margin-bottom: 6px;
+
+	// if file upload
+	&--true {
+		.blank__label {
+			background-color: #02c66f;
+		}
+	}
+  // form header
+  &:first-child {
+    margin-bottom: 9px;
+
+    .blank__label {
+      width: 100%;
+    }
+  }
+  // yes/no
+  &:nth-child(7) {
+    justify-content: flex-start;
+  }
+  // textarea
+  &:nth-child(8) {
+    margin-bottom: 20px;
+
+    .blank__label {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    textarea {
+      width: 100%;
+      padding: 25px 10px 10px 10px;
+    }
+  }
+  //captcha submit
+  &:nth-child(9) {
+    margin-bottom: 0;
+  }
+  // captcha
+  &:nth-child(10) {
+    align-items: flex-end;
+  }
+}
+
+.blank__label {
+  width: 55%;
+  padding: 3px 0 3px 10px;
+  text-transform: uppercase;
+  background-color: $gray;
+  color: white;
+  white-space: nowrap;
+	a {
+		padding-left: 10px;
+	}
+}
+
+.blank__label-text {
+  display: block;
+  text-transform: none;
+  font-size: 7px;
+}
+
+.blank__captcha {
+  width: 45%;
+  height: 60px;
+}
+
+.blank__submit {
+  display: block;
+  width: 55%;
+  margin: 0;
+  padding: 3px 0 3px 10px;
+  text-transform: uppercase;
+  text-align: left;
+  font: normal 10px "Roboto", sans-serif;
+  background-color: $red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+
+  &:hover {
+  	box-shadow: 1px -1px 1px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+// text part
+.blank__subs {
+  padding-top: 5px;
+  font-size: 9px;
+  color: black;
+}
+
+.blank__subs-title {
+  padding: 6px 16px 6px 10px;
+  text-transform: uppercase;
+  font-size: 9px;
+	line-height: 12px;
+  background-color: $gray;
+  color: white;
+
+	&--file {
+		margin: 20px 0 0 0;
+	}
+}
+
+.blank__text {
+	font-size: 9px;
+  padding: 16px 20px 0 10px;
+}
+
+.blank__par {
+  margin-bottom: 10px;
+
+  span {
+    text-transform: uppercase;
+  }
+}
+
+// styles for number list
+.blank__ol-list {
+  counter-reset: myCounter;
+
+	li {
+		display: flex;
+		list-style: none;
+
+		&:before {
+			display: block;
+		  counter-increment: myCounter;
+		  content:counter(myCounter);
+		  color: $gray;
+		  text-align: center;
+		  margin: 0 30px 0 0;
+		}
+	}
+}
+
+// поле выбора файла
+.blank__file {
+  position: relative;
+  display: flex;
+  width: 45%;
+  min-height: 100%;
+  background-color: white;
+  border: 1px solid white;
+  overflow: hidden;
+  font-size: 1em;
+  line-height: 100%;
+
+  .blank__file-btn,
+	mark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    text-transform: uppercase;
+  }
+}
+
+.blank__file-btn {
+  color: $gray;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.blank__file > mark {
+  background-color: $gray;
+  color: white;
+
+	&.green {
+		background-color: #02C66F;
+	}
+}
+
+.blank__file input[type=file] {
+    position: absolute;
+    top: 0;
+    display: none;
+    opacity: 0
+}
+
+// yes/no btn`s
+.blank__btn {
+	outline: 0;
+	display: block;
+	width: 4em;
+	height: 2em;
+  margin-left: 16px;
+	padding: 4px;
+	position: relative;
+	cursor: pointer;
+	background: $gray;
+	color: white;
+  text-transform: uppercase;
+	text-align: center;
+	transition: all .2s ease;
+}
+
+.blank__tgl {
+	display: none;
+
+	&:checked {
+		&+.blank__btn {
+			background: #02C66F;
+		}
+	}
+}

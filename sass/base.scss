@@ -1,0 +1,63 @@
+/* base */
+html {
+  height: 100%;
+  font: normal 10px/1.33 "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  font-size: 1rem;
+  color: $gray;
+  background: white;
+  -webkit-text-size-adjust: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+
+  &:hover,
+  &:active {
+    color: $red;
+  }
+}
+
+// base wrapper
+.page-wrapper {
+	display: flex;
+	flex-direction: column;
+  min-width: 760px;
+  max-width: 2000px;
+  min-height: 100%;
+  // equal to footer height
+  margin-bottom: -4vh;
+
+	// iPad with portrait orientation.
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+		margin-bottom: -40.96px; }
+	// iPad with landscape orientation.
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+		margin-bottom: -30.72px; }
+
+  &:after {
+    content: "";
+    display: block;
+    height: 4vh;
+
+		// iPad with portrait orientation.
+		@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+			height: 40.96px; }
+		// iPad with landscape orientation.
+		@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+			height: 30.72px; }
+  }
+}

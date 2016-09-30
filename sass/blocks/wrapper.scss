@@ -1,0 +1,78 @@
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 96vh;
+	margin-top: auto;
+	padding: 96px 0 0;
+	overflow: hidden;
+	opacity: 0.99;
+
+	// iPad with portrait orientation.
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+		height: 983.04px; }
+	// iPad with landscape orientation.
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+		height: 737.28px; }
+
+	&--row {
+		flex-direction: row;
+		align-items: flex-start;
+		background-color: $gray-light;
+		overflow: auto;
+	}
+	&--gallery {
+		width: 100%;
+		margin: 0;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: stretch;
+	}
+}
+
+.wrapper__main {
+	display: flex;
+	justify-content: center;
+	width: 90%;
+}
+
+.wrapper__main-part {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 30%;
+	padding: 70px 0;
+	text-align: center;
+	text-transform: uppercase;
+	font: normal 1.4rem "Roboto", sans-serif;
+	color: $gray;
+
+	&:first-child {
+		justify-content: flex-end;
+	}
+	&--logo {
+		width: auto;
+		padding: 70px 50px;
+
+		&:hover {
+			.wrapper__logo path {
+				fill: #E31E24;
+				transition: all 0.5s;
+			}
+		}
+	}
+}
+
+.wrapper__logo {
+	display: block;
+	width: 31px;
+	height: 63px;
+	// background: url(../img/logo-w.png) no-repeat;
+}
+
+.wrapper__banner {
+	width: 50%;
+	height: 200px;
+}
