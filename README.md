@@ -1,6 +1,6 @@
-# logotype.by
-### by Raman_Yasel
-### for AwagroStyle
+# CollectionStudio
+## logotype.by
+### by Raman_Yasel (AwagroStyle)
 ---
 
 Сверстано с использованием препроцессора SASS, БЭМ - как способ именования селекторов (b__e--m). Резиновая адаптивность до разрешения 760px (дальше не складывается). Для сборки использовал gulp, шрифты подключены с google-fonts. Меню - фиксированo сверху.

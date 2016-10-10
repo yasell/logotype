@@ -7,11 +7,13 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync");
 var mqpacker = require("css-mqpacker");
-var cssnano = require("gulp-cssnano");
 var rename = require("gulp-rename");
 var clean = require("gulp-clean");
+var cssnano = require("gulp-cssnano");
+var image = require("gulp-image");
+var minify = require("gulp-minify");
 
-// sass
+// sass task
 gulp.task("style", function() {
     gulp.src("sass/style.scss")
         .pipe(plumber())
@@ -30,7 +32,7 @@ gulp.task("style", function() {
         }));
 });
 
-// server
+// server task
 gulp.task("serve", ["style"], function() {
     server.init({
         server: ".",
@@ -43,7 +45,7 @@ gulp.task("serve", ["style"], function() {
     gulp.watch("*.html").on("change", server.reload);
 });
 
-// build
+// build task start
 gulp.task("clean", function() {
     return gulp.src("build", {
             read: false
@@ -59,17 +61,35 @@ gulp.task("copy", ["clean"], function() {
     gulp.src("css/**/*.css").pipe(gulp.dest("build/css"));
 });
 
-gulp.task("stylemin", ["copy"], function() {
-    return gulp.src("css/style.css")
-        .pipe(cssnano())
-        .pipe(rename({
-            suffix: ".min"
-        }))
-        .pipe(gulp.dest("build/css"));
+// minify files
+gulp.task("style-min", function() {
+  return gulp.src("css/style.css")
+      .pipe(cssnano())
+      .pipe(rename({suffix: ".min"}))
+      .pipe(gulp.dest("build/css"));
 });
 
+gulp.task("img-min", function () {
+  gulp.src("img/**/*")
+    .pipe(image())
+    .pipe(gulp.dest("build/img/"));
+});
+
+gulp.task("js-min", function() {
+  gulp.src("js/*.js")
+    .pipe(minify({
+        ext:{
+            min:".min.js"
+        },
+    }))
+    .pipe(gulp.dest("build/js"))
+});
+
+// build task (final)
 gulp.task("build", [
     "clean",
     "copy",
-    "stylemin",
+    "style-min",
+		"img-min",
+		"js-min",
 ], function() {});
